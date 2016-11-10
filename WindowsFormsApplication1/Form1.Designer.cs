@@ -35,10 +35,21 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblzVenus = new System.Windows.Forms.Label();
+            this.lblzEarth = new System.Windows.Forms.Label();
+            this.lblzMars = new System.Windows.Forms.Label();
+            this.lblzJupiter = new System.Windows.Forms.Label();
+            this.lblzMercury = new System.Windows.Forms.Label();
+            this.lblzUranus = new System.Windows.Forms.Label();
+            this.lblzNeptune = new System.Windows.Forms.Label();
+            this.lblzSaturn = new System.Windows.Forms.Label();
+            this.lblzPlanetName = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,7 +58,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(72, 188);
+            this.radioButton1.Location = new System.Drawing.Point(53, 424);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(85, 17);
             this.radioButton1.TabIndex = 0;
@@ -59,7 +70,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(268, 188);
+            this.radioButton2.Location = new System.Drawing.Point(249, 424);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(85, 17);
             this.radioButton2.TabIndex = 1;
@@ -71,7 +82,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(445, 188);
+            this.radioButton3.Location = new System.Drawing.Point(426, 424);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(85, 17);
             this.radioButton3.TabIndex = 2;
@@ -84,7 +95,7 @@
             // 
             this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(134, 211);
+            this.checkedListBox1.Location = new System.Drawing.Point(53, 458);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(321, 94);
             this.checkedListBox1.TabIndex = 6;
@@ -92,7 +103,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(134, 354);
+            this.checkBox1.Location = new System.Drawing.Point(116, 581);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(79, 17);
             this.checkBox1.TabIndex = 7;
@@ -101,7 +112,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(147, 418);
+            this.button1.Location = new System.Drawing.Point(148, 598);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 23);
             this.button1.TabIndex = 8;
@@ -111,7 +122,7 @@
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(277, 418);
+            this.button2.Location = new System.Drawing.Point(278, 598);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 9;
@@ -119,10 +130,29 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(392, 519);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 105);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::WindowsFormsApplication1.Properties.Resources.planets;
+            this.pictureBox4.Location = new System.Drawing.Point(53, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(470, 297);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WindowsFormsApplication1.Properties.Resources.jupitermain;
-            this.pictureBox3.Location = new System.Drawing.Point(430, 91);
+            this.pictureBox3.Location = new System.Drawing.Point(411, 327);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(100, 77);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -133,7 +163,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApplication1.Properties.Resources.saturnmain;
-            this.pictureBox2.Location = new System.Drawing.Point(253, 91);
+            this.pictureBox2.Location = new System.Drawing.Point(234, 327);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 77);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -144,7 +174,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.venusmain;
-            this.pictureBox1.Location = new System.Drawing.Point(57, 91);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 327);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,21 +182,105 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.rdoClick);
             // 
-            // label1
+            // lblzVenus
             // 
-            this.label1.Location = new System.Drawing.Point(395, 319);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 105);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "label1";
-            this.label1.Visible = false;
+            this.lblzVenus.BackColor = System.Drawing.Color.Transparent;
+            this.lblzVenus.Location = new System.Drawing.Point(106, 55);
+            this.lblzVenus.Name = "lblzVenus";
+            this.lblzVenus.Size = new System.Drawing.Size(77, 75);
+            this.lblzVenus.TabIndex = 12;
+            this.lblzVenus.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
+            // 
+            // lblzEarth
+            // 
+            this.lblzEarth.BackColor = System.Drawing.Color.Transparent;
+            this.lblzEarth.Location = new System.Drawing.Point(196, 23);
+            this.lblzEarth.Name = "lblzEarth";
+            this.lblzEarth.Size = new System.Drawing.Size(77, 75);
+            this.lblzEarth.TabIndex = 13;
+            this.lblzEarth.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
+            // 
+            // lblzMars
+            // 
+            this.lblzMars.BackColor = System.Drawing.Color.Transparent;
+            this.lblzMars.Location = new System.Drawing.Point(289, 23);
+            this.lblzMars.Name = "lblzMars";
+            this.lblzMars.Size = new System.Drawing.Size(77, 75);
+            this.lblzMars.TabIndex = 14;
+            this.lblzMars.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
+            // 
+            // lblzJupiter
+            // 
+            this.lblzJupiter.BackColor = System.Drawing.Color.Transparent;
+            this.lblzJupiter.Location = new System.Drawing.Point(377, 63);
+            this.lblzJupiter.Name = "lblzJupiter";
+            this.lblzJupiter.Size = new System.Drawing.Size(77, 75);
+            this.lblzJupiter.TabIndex = 15;
+            this.lblzJupiter.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
+            // 
+            // lblzMercury
+            // 
+            this.lblzMercury.BackColor = System.Drawing.Color.Transparent;
+            this.lblzMercury.Location = new System.Drawing.Point(79, 151);
+            this.lblzMercury.Name = "lblzMercury";
+            this.lblzMercury.Size = new System.Drawing.Size(77, 75);
+            this.lblzMercury.TabIndex = 16;
+            this.lblzMercury.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
+            // 
+            // lblzUranus
+            // 
+            this.lblzUranus.BackColor = System.Drawing.Color.Transparent;
+            this.lblzUranus.Location = new System.Drawing.Point(168, 200);
+            this.lblzUranus.Name = "lblzUranus";
+            this.lblzUranus.Size = new System.Drawing.Size(77, 75);
+            this.lblzUranus.TabIndex = 17;
+            this.lblzUranus.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
+            // 
+            // lblzNeptune
+            // 
+            this.lblzNeptune.BackColor = System.Drawing.Color.Transparent;
+            this.lblzNeptune.Location = new System.Drawing.Point(282, 216);
+            this.lblzNeptune.Name = "lblzNeptune";
+            this.lblzNeptune.Size = new System.Drawing.Size(77, 75);
+            this.lblzNeptune.TabIndex = 18;
+            this.lblzNeptune.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
+            // 
+            // lblzSaturn
+            // 
+            this.lblzSaturn.BackColor = System.Drawing.Color.Transparent;
+            this.lblzSaturn.Location = new System.Drawing.Point(377, 169);
+            this.lblzSaturn.Name = "lblzSaturn";
+            this.lblzSaturn.Size = new System.Drawing.Size(77, 75);
+            this.lblzSaturn.TabIndex = 19;
+            this.lblzSaturn.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
+            // 
+            // lblzPlanetName
+            // 
+            this.lblzPlanetName.BackColor = System.Drawing.Color.Transparent;
+            this.lblzPlanetName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblzPlanetName.ForeColor = System.Drawing.Color.Aqua;
+            this.lblzPlanetName.Location = new System.Drawing.Point(228, 129);
+            this.lblzPlanetName.Name = "lblzPlanetName";
+            this.lblzPlanetName.Size = new System.Drawing.Size(100, 50);
+            this.lblzPlanetName.TabIndex = 20;
+            this.lblzPlanetName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(617, 504);
+            this.ClientSize = new System.Drawing.Size(617, 633);
+            this.Controls.Add(this.lblzPlanetName);
+            this.Controls.Add(this.lblzSaturn);
+            this.Controls.Add(this.lblzNeptune);
+            this.Controls.Add(this.lblzUranus);
+            this.Controls.Add(this.lblzMercury);
+            this.Controls.Add(this.lblzJupiter);
+            this.Controls.Add(this.lblzMars);
+            this.Controls.Add(this.lblzEarth);
+            this.Controls.Add(this.lblzVenus);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -179,7 +293,8 @@
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Intergalatic Travels";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -201,6 +316,16 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lblzVenus;
+        private System.Windows.Forms.Label lblzEarth;
+        private System.Windows.Forms.Label lblzMars;
+        private System.Windows.Forms.Label lblzJupiter;
+        private System.Windows.Forms.Label lblzMercury;
+        private System.Windows.Forms.Label lblzUranus;
+        private System.Windows.Forms.Label lblzNeptune;
+        private System.Windows.Forms.Label lblzSaturn;
+        private System.Windows.Forms.Label lblzPlanetName;
     }
 }
 

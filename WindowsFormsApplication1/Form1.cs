@@ -15,8 +15,21 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
-        }
 
+            foreach (Control ctrl in Controls)
+            {
+                if (ctrl is Label && ctrl.Name.Contains("lblz"))
+                {
+                    // http://stackoverflow.com/questions/9387267/transparent-control-over-picturebox
+                    var pos = this.PointToScreen(ctrl.Location);
+                    pos = pictureBox4.PointToClient(pos);
+                    ctrl.Parent = pictureBox4;
+                    ctrl.Location = pos;
+                    ctrl.BackColor = System.Drawing.Color.Transparent;
+                }
+            }
+        }
+        
         private void rdoClick(object sender, EventArgs e)
         {
 
@@ -55,6 +68,16 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Planets_MouseOver(object sender, EventArgs e)
+        {
+            if (sender == lblzMercury)
+            {
+                lblzPlanetName.Text = "Mercury";
+            }
+
+
         }
     }
 }
