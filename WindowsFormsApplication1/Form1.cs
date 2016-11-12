@@ -16,7 +16,13 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
 
+            var cList = new List<Control>();
             foreach (Control ctrl in Controls)
+            {
+                cList.Add(ctrl);
+            }
+
+            foreach (Control ctrl in cList)
             {
                 if (ctrl is Label && ctrl.Name.Contains("lblz"))
                 {
@@ -33,32 +39,32 @@ namespace WindowsFormsApplication1
         private void rdoClick(object sender, EventArgs e)
         {
 
-            checkedListBox1.Items.Clear();
+            clbActivities.Items.Clear();
             label1.Visible = true;
             string description = "";
             string insurance = "";
             if (sender == radioButton1 || sender == pictureBox1)
             {
                 description = "";
-                checkedListBox1.Items.Add("Volcano Bath");
-                checkedListBox1.Items.Add("Tanning");
-                checkedListBox1.Items.Add("Hoverboard Heatwave Surfing");
+                clbActivities.Items.Add("Volcano Bath");
+                clbActivities.Items.Add("Tanning");
+                clbActivities.Items.Add("Hoverboard Heatwave Surfing");
                 insurance = "Volanco";
             }
             else if(sender == radioButton2 || sender == pictureBox2)
             {
                 description = "";
-                checkedListBox1.Items.Add("Ice skating rings");
-                checkedListBox1.Items.Add("Ring Toss");
-                checkedListBox1.Items.Add("Yeti Limbo");
+                clbActivities.Items.Add("Ice skating rings");
+                clbActivities.Items.Add("Ring Toss");
+                clbActivities.Items.Add("Yeti Limbo");
                 insurance = "Frostbite";
             }
             else if(sender == radioButton3 || sender == pictureBox3)
             {
                 description = "";
-                checkedListBox1.Items.Add("Storm Chasing");
-                checkedListBox1.Items.Add("'Great Red Spot' Shooting Gallery");
-                checkedListBox1.Items.Add("High Gravity Crossfit");
+                clbActivities.Items.Add("Storm Chasing");
+                clbActivities.Items.Add("'Great Red Spot' Shooting Gallery");
+                clbActivities.Items.Add("High Gravity Crossfit");
                 insurance = "Gravity Crushing";
             }
             label1.Text = description;
