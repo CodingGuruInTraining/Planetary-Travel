@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1
                     pos = pictureBox4.PointToClient(pos);
                     ctrl.Parent = pictureBox4;
                     ctrl.Location = pos;
-                    ctrl.BackColor = System.Drawing.Color.Transparent;
+                    ctrl.BackColor = Color.Transparent;
                 }
             }
         }
@@ -42,33 +42,21 @@ namespace WindowsFormsApplication1
             clbActivities.Items.Clear();
             lblInfoDisplay.Visible = true;
             string description = "";
-            string insurance = "";
             if (sender == lblzVenus)
             {
-                description = "";
-                clbActivities.Items.Add("Volcano Bath");
-                clbActivities.Items.Add("Tanning");
-                clbActivities.Items.Add("Hoverboard Heatwave Surfing");
-                insurance = "Volanco";
+                description = "Venus is a small and hot planet. It’s the second planet from the sun (between Earth and Mercury). It Orbits the Sun in 224.5 of our Earth days. Venus is named after the Roman Goddess of love and fertility – great honeymoon spot! On Earth – Venus is the second brightest object in the sky after the Earth moon. Venus itself does not have a moon however. The surface of Venus is almost entirely formed by volcanic activity. The plant offers volcano baths, tanning and hover board heat wave surfing as it’s tourist activities.";
+                destinationSelect(description, "Volcano Bath", "Tanning", "Hoverboard Heatwave Surfing", "Volcano", "Venus");
             }
             else if(sender == lblzSaturn)
             {
-                description = "";
-                clbActivities.Items.Add("Ice skating rings");
-                clbActivities.Items.Add("Ring Toss");
-                clbActivities.Items.Add("Yeti Limbo");
-                insurance = "Frostbite";
+                description = "Saturn is a colder planet. It’s the 6th planet from the sun and rotates the sun every 10,759 Earth days (or about 29 1⁄2 years). Saturn is made up entirely of gas (hydrogen and helium) but may possibly have a solid core. The planet is surrounded by countless rings of frozen ice that provide it with the tourist’s attractions of ice skating and ice ring toss. Saturn also has over 60 moons and is named after the Roman God of agriculture.";
+                destinationSelect(description, "Ice skating rings", "Ring Toss", "Yeti Limbo", "Frostbite", "Saturn");
             }
             else if(sender == lblzJupiter)
             {
-                description = "";
-                clbActivities.Items.Add("Storm Chasing");
-                clbActivities.Items.Add("'Great Red Spot' Shooting Gallery");
-                clbActivities.Items.Add("High Gravity Crossfit");
-                insurance = "Gravity Crushing";
+                description = "Jupiter is by far the largest planet in the solar system – it’s 2.5 times larger than all the other planets combined. Its incredible mass gives it really dense gravity which is great for training. Jupiter is 5th from the sun. The planet’s atmosphere is incredibly hostile to life and features a Great Red Spot which is an anticyclone storm larger than Earth. There is plenty of storms to chase on the surface and colored objects can be shot from space to change the Great Red Spot to other colors.";
+                destinationSelect(description, "Storm Chasing", "'Great Red Spot' Shooting Gallery", "High Gravity Crossfit", "Gravity Crushing", "Jupiter");
             }
-            lblInfoDisplay.Text = description;
-            cboxInsurance.Text = insurance + " Insurance?";
         }
 
         private void Cancel_Click(object sender, EventArgs e)
@@ -85,6 +73,16 @@ namespace WindowsFormsApplication1
         private void btnPlanTrip_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void destinationSelect(string description, string item1, string item2, string item3, string insurance, string vname)
+        {
+            lblInfoDisplay.Text = description;
+            cboxInsurance.Text = insurance + " Insurance?";
+            clbActivities.Items.Add(item1);
+            clbActivities.Items.Add(item2);
+            clbActivities.Items.Add(item3);
+            lblActivities.Text = "Things to do on " + vname;
         }
     }
 }

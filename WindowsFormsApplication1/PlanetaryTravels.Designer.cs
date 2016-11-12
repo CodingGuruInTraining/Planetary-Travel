@@ -43,14 +43,16 @@
             this.lblzNeptune = new System.Windows.Forms.Label();
             this.lblzSaturn = new System.Windows.Forms.Label();
             this.lblzPlanetName = new System.Windows.Forms.Label();
+            this.lblActivities = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // clbActivities
             // 
             this.clbActivities.CheckOnClick = true;
+            this.clbActivities.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clbActivities.FormattingEnabled = true;
-            this.clbActivities.Location = new System.Drawing.Point(7, 457);
+            this.clbActivities.Location = new System.Drawing.Point(12, 344);
             this.clbActivities.Name = "clbActivities";
             this.clbActivities.Size = new System.Drawing.Size(321, 94);
             this.clbActivities.TabIndex = 6;
@@ -58,9 +60,10 @@
             // cboxInsurance
             // 
             this.cboxInsurance.AutoSize = true;
-            this.cboxInsurance.Location = new System.Drawing.Point(116, 581);
+            this.cboxInsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxInsurance.Location = new System.Drawing.Point(102, 560);
             this.cboxInsurance.Name = "cboxInsurance";
-            this.cboxInsurance.Size = new System.Drawing.Size(79, 17);
+            this.cboxInsurance.Size = new System.Drawing.Size(92, 20);
             this.cboxInsurance.TabIndex = 7;
             this.cboxInsurance.Text = "Insurance?";
             this.cboxInsurance.UseVisualStyleBackColor = true;
@@ -88,11 +91,11 @@
             // 
             // lblInfoDisplay
             // 
-            this.lblInfoDisplay.Location = new System.Drawing.Point(392, 519);
+            this.lblInfoDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoDisplay.Location = new System.Drawing.Point(368, 320);
             this.lblInfoDisplay.Name = "lblInfoDisplay";
-            this.lblInfoDisplay.Size = new System.Drawing.Size(162, 105);
+            this.lblInfoDisplay.Size = new System.Drawing.Size(218, 220);
             this.lblInfoDisplay.TabIndex = 10;
-            this.lblInfoDisplay.Text = "label1";
             this.lblInfoDisplay.Visible = false;
             // 
             // pictureBox4
@@ -196,12 +199,21 @@
             this.lblzPlanetName.TabIndex = 20;
             this.lblzPlanetName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblActivities
+            // 
+            this.lblActivities.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActivities.Location = new System.Drawing.Point(26, 318);
+            this.lblActivities.Name = "lblActivities";
+            this.lblActivities.Size = new System.Drawing.Size(239, 23);
+            this.lblActivities.TabIndex = 21;
+            // 
             // frmPlanetTravels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(617, 633);
+            this.Controls.Add(this.lblActivities);
             this.Controls.Add(this.lblzPlanetName);
             this.Controls.Add(this.lblzSaturn);
             this.Controls.Add(this.lblzNeptune);
@@ -241,6 +253,7 @@
         private System.Windows.Forms.Label lblzNeptune;
         private System.Windows.Forms.Label lblzSaturn;
         private System.Windows.Forms.Label lblzPlanetName;
+        private System.Windows.Forms.Label lblActivities;
     }
 }
 
