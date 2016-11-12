@@ -36,14 +36,14 @@ namespace WindowsFormsApplication1
             }
         }
         
-        private void rdoClick(object sender, EventArgs e)
+        private void picClick(object sender, EventArgs e)
         {
 
             clbActivities.Items.Clear();
-            label1.Visible = true;
+            lblInfoDisplay.Visible = true;
             string description = "";
             string insurance = "";
-            if (sender == radioButton1 || sender == pictureBox1)
+            if (sender == lblzVenus)
             {
                 description = "";
                 clbActivities.Items.Add("Volcano Bath");
@@ -51,7 +51,7 @@ namespace WindowsFormsApplication1
                 clbActivities.Items.Add("Hoverboard Heatwave Surfing");
                 insurance = "Volanco";
             }
-            else if(sender == radioButton2 || sender == pictureBox2)
+            else if(sender == lblzSaturn)
             {
                 description = "";
                 clbActivities.Items.Add("Ice skating rings");
@@ -59,7 +59,7 @@ namespace WindowsFormsApplication1
                 clbActivities.Items.Add("Yeti Limbo");
                 insurance = "Frostbite";
             }
-            else if(sender == radioButton3 || sender == pictureBox3)
+            else if(sender == lblzJupiter)
             {
                 description = "";
                 clbActivities.Items.Add("Storm Chasing");
@@ -67,8 +67,8 @@ namespace WindowsFormsApplication1
                 clbActivities.Items.Add("High Gravity Crossfit");
                 insurance = "Gravity Crushing";
             }
-            label1.Text = description;
-            checkBox1.Text = insurance + " Insurance?";
+            lblInfoDisplay.Text = description;
+            cboxInsurance.Text = insurance + " Insurance?";
         }
 
         private void button2_Click(object sender, EventArgs e)

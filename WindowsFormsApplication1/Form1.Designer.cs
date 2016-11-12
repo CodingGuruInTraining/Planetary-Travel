@@ -32,10 +32,10 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.clbActivities = new System.Windows.Forms.CheckedListBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cboxInsurance = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblInfoDisplay = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -65,7 +65,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "radioButton1";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.Click += new System.EventHandler(this.rdoClick);
+            this.radioButton1.Click += new System.EventHandler(this.picClick);
             // 
             // radioButton2
             // 
@@ -77,7 +77,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "radioButton2";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.Click += new System.EventHandler(this.rdoClick);
+            this.radioButton2.Click += new System.EventHandler(this.picClick);
             // 
             // radioButton3
             // 
@@ -89,26 +89,26 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "radioButton3";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.Click += new System.EventHandler(this.rdoClick);
+            this.radioButton3.Click += new System.EventHandler(this.picClick);
             // 
-            // checkedListBox1
+            // clbActivities
             // 
             this.clbActivities.CheckOnClick = true;
             this.clbActivities.FormattingEnabled = true;
             this.clbActivities.Location = new System.Drawing.Point(53, 458);
-            this.clbActivities.Name = "checkedListBox1";
+            this.clbActivities.Name = "clbActivities";
             this.clbActivities.Size = new System.Drawing.Size(321, 94);
             this.clbActivities.TabIndex = 6;
             // 
             // checkBox1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(116, 581);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(79, 17);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Insurance?";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cboxInsurance.AutoSize = true;
+            this.cboxInsurance.Location = new System.Drawing.Point(116, 581);
+            this.cboxInsurance.Name = "checkBox1";
+            this.cboxInsurance.Size = new System.Drawing.Size(79, 17);
+            this.cboxInsurance.TabIndex = 7;
+            this.cboxInsurance.Text = "Insurance?";
+            this.cboxInsurance.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -132,12 +132,12 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(392, 519);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 105);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "label1";
-            this.label1.Visible = false;
+            this.lblInfoDisplay.Location = new System.Drawing.Point(392, 519);
+            this.lblInfoDisplay.Name = "label1";
+            this.lblInfoDisplay.Size = new System.Drawing.Size(162, 105);
+            this.lblInfoDisplay.TabIndex = 10;
+            this.lblInfoDisplay.Text = "label1";
+            this.lblInfoDisplay.Visible = false;
             // 
             // pictureBox4
             // 
@@ -158,7 +158,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.rdoClick);
+            this.pictureBox3.Click += new System.EventHandler(this.picClick);
             // 
             // pictureBox2
             // 
@@ -169,7 +169,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.rdoClick);
+            this.pictureBox2.Click += new System.EventHandler(this.picClick);
             // 
             // pictureBox1
             // 
@@ -180,7 +180,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.rdoClick);
+            this.pictureBox1.Click += new System.EventHandler(this.picClick);
             // 
             // lblzVenus
             // 
@@ -189,6 +189,7 @@
             this.lblzVenus.Name = "lblzVenus";
             this.lblzVenus.Size = new System.Drawing.Size(77, 75);
             this.lblzVenus.TabIndex = 12;
+            this.lblzVenus.Click += new System.EventHandler(this.picClick);
             this.lblzVenus.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
             // 
             // lblzEarth
@@ -198,6 +199,7 @@
             this.lblzEarth.Name = "lblzEarth";
             this.lblzEarth.Size = new System.Drawing.Size(77, 75);
             this.lblzEarth.TabIndex = 13;
+            this.lblzEarth.Click += new System.EventHandler(this.picClick);
             this.lblzEarth.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
             // 
             // lblzMars
@@ -207,6 +209,7 @@
             this.lblzMars.Name = "lblzMars";
             this.lblzMars.Size = new System.Drawing.Size(77, 75);
             this.lblzMars.TabIndex = 14;
+            this.lblzMars.Click += new System.EventHandler(this.picClick);
             this.lblzMars.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
             // 
             // lblzJupiter
@@ -216,6 +219,7 @@
             this.lblzJupiter.Name = "lblzJupiter";
             this.lblzJupiter.Size = new System.Drawing.Size(77, 75);
             this.lblzJupiter.TabIndex = 15;
+            this.lblzJupiter.Click += new System.EventHandler(this.picClick);
             this.lblzJupiter.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
             // 
             // lblzMercury
@@ -225,6 +229,7 @@
             this.lblzMercury.Name = "lblzMercury";
             this.lblzMercury.Size = new System.Drawing.Size(77, 75);
             this.lblzMercury.TabIndex = 16;
+            this.lblzMercury.Click += new System.EventHandler(this.picClick);
             this.lblzMercury.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
             // 
             // lblzUranus
@@ -234,6 +239,7 @@
             this.lblzUranus.Name = "lblzUranus";
             this.lblzUranus.Size = new System.Drawing.Size(77, 75);
             this.lblzUranus.TabIndex = 17;
+            this.lblzUranus.Click += new System.EventHandler(this.picClick);
             this.lblzUranus.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
             // 
             // lblzNeptune
@@ -243,6 +249,7 @@
             this.lblzNeptune.Name = "lblzNeptune";
             this.lblzNeptune.Size = new System.Drawing.Size(77, 75);
             this.lblzNeptune.TabIndex = 18;
+            this.lblzNeptune.Click += new System.EventHandler(this.picClick);
             this.lblzNeptune.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
             // 
             // lblzSaturn
@@ -252,6 +259,7 @@
             this.lblzSaturn.Name = "lblzSaturn";
             this.lblzSaturn.Size = new System.Drawing.Size(77, 75);
             this.lblzSaturn.TabIndex = 19;
+            this.lblzSaturn.Click += new System.EventHandler(this.picClick);
             this.lblzSaturn.MouseEnter += new System.EventHandler(this.Planets_MouseOver);
             // 
             // lblzPlanetName
@@ -281,10 +289,10 @@
             this.Controls.Add(this.lblzEarth);
             this.Controls.Add(this.lblzVenus);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblInfoDisplay);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.cboxInsurance);
             this.Controls.Add(this.clbActivities);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -312,10 +320,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.CheckedListBox clbActivities;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cboxInsurance;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblInfoDisplay;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lblzVenus;
         private System.Windows.Forms.Label lblzEarth;
