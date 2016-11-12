@@ -30,7 +30,7 @@
         {
             this.clbActivities = new System.Windows.Forms.CheckedListBox();
             this.cboxInsurance = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPlanTrip = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblInfoDisplay = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -65,14 +65,15 @@
             this.cboxInsurance.Text = "Insurance?";
             this.cboxInsurance.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnPlanTrip
             // 
-            this.button1.Location = new System.Drawing.Point(148, 598);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Plan My Trip!";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPlanTrip.Location = new System.Drawing.Point(148, 598);
+            this.btnPlanTrip.Name = "btnPlanTrip";
+            this.btnPlanTrip.Size = new System.Drawing.Size(97, 23);
+            this.btnPlanTrip.TabIndex = 8;
+            this.btnPlanTrip.Text = "Plan My Trip!";
+            this.btnPlanTrip.UseVisualStyleBackColor = true;
+            this.btnPlanTrip.Click += new System.EventHandler(this.btnPlanTrip_Click);
             // 
             // btnCancel
             // 
@@ -213,7 +214,7 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.lblInfoDisplay);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPlanTrip);
             this.Controls.Add(this.cboxInsurance);
             this.Controls.Add(this.clbActivities);
             this.Name = "frmPlanetTravels";
@@ -227,7 +228,7 @@
         #endregion
         private System.Windows.Forms.CheckedListBox clbActivities;
         private System.Windows.Forms.CheckBox cboxInsurance;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPlanTrip;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblInfoDisplay;
         private System.Windows.Forms.PictureBox pictureBox4;

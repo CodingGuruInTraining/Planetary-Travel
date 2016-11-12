@@ -78,11 +78,12 @@ namespace WindowsFormsApplication1
 
         private void Planets_MouseOver(object sender, EventArgs e)
         {
-            if (sender == lblzMercury)
-            {
-                lblzPlanetName.Text = "Mercury";
-            }
+            string lblName = ((Label)sender).Name;
+            lblzPlanetName.Text = lblName.Remove(0,4);
+        }
 
+        private void btnPlanTrip_Click(object sender, EventArgs e)
+        {
 
         }
     }
