@@ -15,18 +15,18 @@ namespace WindowsFormsApplication1
         public frmPlanetTravels()
         {
             InitializeComponent();
-
+            // Creates List of all controls to loop through for specific ones.
             var cList = new List<Control>();
             foreach (Control ctrl in Controls)
-            {
                 cList.Add(ctrl);
-            }
-
+            
+            // Loops through List for controls starting with "lblz" and makes
+            // them invisible.
             foreach (Control ctrl in cList)
             {
                 if (ctrl is Label && ctrl.Name.Contains("lblz"))
                 {
-                    // http://stackoverflow.com/questions/9387267/transparent-control-over-picturebox
+                    // Taken from: http://stackoverflow.com/questions/9387267/transparent-control-over-picturebox
                     var pos = this.PointToScreen(ctrl.Location);
                     pos = pictureBox4.PointToClient(pos);
                     ctrl.Parent = pictureBox4;
@@ -37,11 +37,14 @@ namespace WindowsFormsApplication1
         }
         
         private void picClick(object sender, EventArgs e)
-        {
+        {   // Click event for selecting a destination planet.
 
+            // Clears activities list and displays info label.
             clbActivities.Items.Clear();
             lblInfoDisplay.Visible = true;
             string description = "";
+            // Checks if a specific label was clicked and populates specific information
+            // about the planet selected.
             if (sender == lblzVenus)
             {
                 description = "Venus is a small and hot planet. It’s the second planet from the sun (between Earth and Mercury). It Orbits the Sun in 224.5 of our Earth days. Venus is named after the Roman Goddess of love and fertility – great honeymoon spot! On Earth – Venus is the second brightest object in the sky after the Earth moon. Venus itself does not have a moon however. The surface of Venus is almost entirely formed by volcanic activity. The plant offers volcano baths, tanning and hover board heat wave surfing as it’s tourist activities.";
@@ -60,13 +63,16 @@ namespace WindowsFormsApplication1
         }
 
         private void Cancel_Click(object sender, EventArgs e)
-        {
+        {   // Closes application.
             this.Close();
         }
 
         private void Planets_MouseOver(object sender, EventArgs e)
-        {
+        {   // MouseOver event that displays the name of the planet as user mouses over.
+
+            // Creates string variable with the name of the sender (selected label).
             string lblName = ((Label)sender).Name;
+            // Removes "lblz" from string and adds to label.
             lblzPlanetName.Text = lblName.Remove(0,4);
         }
 
@@ -76,7 +82,7 @@ namespace WindowsFormsApplication1
         }
 
         private void destinationSelect(string description, string item1, string item2, string item3, string insurance, string vname)
-        {
+        {   // This function populates certain labels and listbox data based on received parameters.
             lblInfoDisplay.Text = description;
             cboxInsurance.Text = insurance + " Insurance?";
             clbActivities.Items.Add(item1);
