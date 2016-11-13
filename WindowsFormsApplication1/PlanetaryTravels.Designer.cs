@@ -217,6 +217,7 @@
             // 
             this.dateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateStart.Location = new System.Drawing.Point(102, 482);
+            this.dateStart.MinDate = new System.DateTime(2016, 11, 12, 0, 0, 0, 0);
             this.dateStart.Name = "dateStart";
             this.dateStart.Size = new System.Drawing.Size(222, 22);
             this.dateStart.TabIndex = 22;
@@ -225,6 +226,7 @@
             // 
             this.dateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateEnd.Location = new System.Drawing.Point(102, 521);
+            this.dateEnd.MinDate = new System.DateTime(2016, 11, 12, 0, 0, 0, 0);
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Size = new System.Drawing.Size(222, 22);
             this.dateEnd.TabIndex = 23;

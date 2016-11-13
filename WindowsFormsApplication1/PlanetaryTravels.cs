@@ -79,7 +79,9 @@ namespace WindowsFormsApplication1
 
         private void btnPlanTrip_Click(object sender, EventArgs e)
         {
-
+            int position = lblActivities.Text.LastIndexOf(" ");
+            string vname = lblActivities.Text.Substring(position);
+            
         }
 
         private void destinationSelect(string description, string item1, string item2, string item3, string insurance, string vname)
