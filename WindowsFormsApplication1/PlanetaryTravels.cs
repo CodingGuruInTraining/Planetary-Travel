@@ -35,6 +35,9 @@ namespace WindowsFormsApplication1
                     ctrl.BackColor = Color.Transparent;
                 }
             }
+            // Sets minimum dates to choose from to the current date (time travel unavailable at this time).
+            dateStart.MinDate = DateTime.Today;
+            dateEnd.MinDate = DateTime.Today;
         }
         
         private void picClick(object sender, EventArgs e)
