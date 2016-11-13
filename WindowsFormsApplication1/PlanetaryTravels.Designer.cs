@@ -210,7 +210,7 @@
             this.lblActivities.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActivities.Location = new System.Drawing.Point(26, 318);
             this.lblActivities.Name = "lblActivities";
-            this.lblActivities.Size = new System.Drawing.Size(239, 23);
+            this.lblActivities.Size = new System.Drawing.Size(205, 23);
             this.lblActivities.TabIndex = 21;
             // 
             // dateStart
@@ -253,6 +253,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.Astronaut_Chilling_On_The_Moon_With_Beer_Wallpaper_1920x12001;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(617, 633);
             this.Controls.Add(this.label2);
@@ -275,7 +276,9 @@
             this.Controls.Add(this.btnPlanTrip);
             this.Controls.Add(this.cboxInsurance);
             this.Controls.Add(this.clbActivities);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "frmPlanetTravels";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Intergalactic Travels";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);

@@ -63,6 +63,26 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Astronaut_Chilling_On_The_Moon_With_Beer_Wallpaper_1920x1200 {
+            get {
+                object obj = ResourceManager.GetObject("Astronaut-Chilling-On-The-Moon-With-Beer-Wallpaper-1920x1200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Astronaut_Chilling_On_The_Moon_With_Beer_Wallpaper_1920x12001 {
+            get {
+                object obj = ResourceManager.GetObject("Astronaut-Chilling-On-The-Moon-With-Beer-Wallpaper-1920x12001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap jupitermain {
             get {
                 object obj = ResourceManager.GetObject("jupitermain", resourceCulture);
