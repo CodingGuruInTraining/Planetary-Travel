@@ -24,6 +24,7 @@ namespace WindowsFormsApplication1
             // them invisible.
             foreach (Control ctrl in cList)
             {
+                // Checks if control is label and name includes unique identifier, "lblz."
                 if (ctrl is Label && ctrl.Name.Contains("lblz"))
                 {
                     // Taken from: http://stackoverflow.com/questions/9387267/transparent-control-over-picturebox

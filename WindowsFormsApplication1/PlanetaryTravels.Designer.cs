@@ -44,6 +44,10 @@
             this.lblzSaturn = new System.Windows.Forms.Label();
             this.lblzPlanetName = new System.Windows.Forms.Label();
             this.lblActivities = new System.Windows.Forms.Label();
+            this.dateStart = new System.Windows.Forms.DateTimePicker();
+            this.dateEnd = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,14 +58,14 @@
             this.clbActivities.FormattingEnabled = true;
             this.clbActivities.Location = new System.Drawing.Point(12, 344);
             this.clbActivities.Name = "clbActivities";
-            this.clbActivities.Size = new System.Drawing.Size(321, 94);
+            this.clbActivities.Size = new System.Drawing.Size(321, 89);
             this.clbActivities.TabIndex = 6;
             // 
             // cboxInsurance
             // 
             this.cboxInsurance.AutoSize = true;
             this.cboxInsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxInsurance.Location = new System.Drawing.Point(102, 560);
+            this.cboxInsurance.Location = new System.Drawing.Point(40, 439);
             this.cboxInsurance.Name = "cboxInsurance";
             this.cboxInsurance.Size = new System.Drawing.Size(92, 20);
             this.cboxInsurance.TabIndex = 7;
@@ -70,9 +74,10 @@
             // 
             // btnPlanTrip
             // 
-            this.btnPlanTrip.Location = new System.Drawing.Point(148, 598);
+            this.btnPlanTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlanTrip.Location = new System.Drawing.Point(192, 591);
             this.btnPlanTrip.Name = "btnPlanTrip";
-            this.btnPlanTrip.Size = new System.Drawing.Size(97, 23);
+            this.btnPlanTrip.Size = new System.Drawing.Size(125, 28);
             this.btnPlanTrip.TabIndex = 8;
             this.btnPlanTrip.Text = "Plan My Trip!";
             this.btnPlanTrip.UseVisualStyleBackColor = true;
@@ -81,9 +86,10 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(278, 598);
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(341, 591);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(84, 28);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -207,12 +213,52 @@
             this.lblActivities.Size = new System.Drawing.Size(239, 23);
             this.lblActivities.TabIndex = 21;
             // 
+            // dateStart
+            // 
+            this.dateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateStart.Location = new System.Drawing.Point(102, 482);
+            this.dateStart.Name = "dateStart";
+            this.dateStart.Size = new System.Drawing.Size(222, 22);
+            this.dateStart.TabIndex = 22;
+            // 
+            // dateEnd
+            // 
+            this.dateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateEnd.Location = new System.Drawing.Point(102, 521);
+            this.dateEnd.Name = "dateEnd";
+            this.dateEnd.Size = new System.Drawing.Size(222, 22);
+            this.dateEnd.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 484);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 16);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Start Date:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 523);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 16);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "End Date:";
+            // 
             // frmPlanetTravels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(617, 633);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dateEnd);
+            this.Controls.Add(this.dateStart);
             this.Controls.Add(this.lblActivities);
             this.Controls.Add(this.lblzPlanetName);
             this.Controls.Add(this.lblzSaturn);
@@ -254,6 +300,10 @@
         private System.Windows.Forms.Label lblzSaturn;
         private System.Windows.Forms.Label lblzPlanetName;
         private System.Windows.Forms.Label lblActivities;
+        private System.Windows.Forms.DateTimePicker dateStart;
+        private System.Windows.Forms.DateTimePicker dateEnd;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
