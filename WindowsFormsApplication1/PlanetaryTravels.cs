@@ -29,8 +29,8 @@ namespace WindowsFormsApplication1
                 {
                     // Taken from: http://stackoverflow.com/questions/9387267/transparent-control-over-picturebox
                     var pos = this.PointToScreen(ctrl.Location);
-                    pos = pictureBox4.PointToClient(pos);
-                    ctrl.Parent = pictureBox4;
+                    pos = picboxPlanets.PointToClient(pos);
+                    ctrl.Parent = picboxPlanets;
                     ctrl.Location = pos;
                     ctrl.BackColor = Color.Transparent;
                 }
@@ -95,6 +95,11 @@ namespace WindowsFormsApplication1
             clbActivities.Items.Add(item2);
             clbActivities.Items.Add(item3);
             lblActivities.Text = "Things to do on " + vname;
+        }
+
+        private void ClearMouseMove(object sender, EventArgs e)
+        {
+            lblzPlanetName.Text = "";
         }
     }
 }

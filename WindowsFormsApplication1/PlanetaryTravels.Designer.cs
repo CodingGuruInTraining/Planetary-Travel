@@ -33,7 +33,7 @@
             this.btnPlanTrip = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblInfoDisplay = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.picboxPlanets = new System.Windows.Forms.PictureBox();
             this.lblzVenus = new System.Windows.Forms.Label();
             this.lblzEarth = new System.Windows.Forms.Label();
             this.lblzMars = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             this.dateEnd = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxPlanets)).BeginInit();
             this.SuspendLayout();
             // 
             // clbActivities
@@ -104,15 +104,16 @@
             this.lblInfoDisplay.TabIndex = 10;
             this.lblInfoDisplay.Visible = false;
             // 
-            // pictureBox4
+            // picboxPlanets
             // 
-            this.pictureBox4.Image = global::WindowsFormsApplication1.Properties.Resources.planets;
-            this.pictureBox4.Location = new System.Drawing.Point(73, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(470, 297);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
+            this.picboxPlanets.Image = global::WindowsFormsApplication1.Properties.Resources.planets;
+            this.picboxPlanets.Location = new System.Drawing.Point(73, 12);
+            this.picboxPlanets.Name = "picboxPlanets";
+            this.picboxPlanets.Size = new System.Drawing.Size(470, 297);
+            this.picboxPlanets.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxPlanets.TabIndex = 11;
+            this.picboxPlanets.TabStop = false;
+            this.picboxPlanets.MouseLeave += new System.EventHandler(this.ClearMouseMove);
             // 
             // lblzVenus
             // 
@@ -272,7 +273,7 @@
             this.Controls.Add(this.lblzMars);
             this.Controls.Add(this.lblzEarth);
             this.Controls.Add(this.lblzVenus);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.picboxPlanets);
             this.Controls.Add(this.lblInfoDisplay);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnPlanTrip);
@@ -282,7 +283,7 @@
             this.Name = "frmPlanetTravels";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Intergalactic Travels";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxPlanets)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,7 +295,7 @@
         private System.Windows.Forms.Button btnPlanTrip;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblInfoDisplay;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox picboxPlanets;
         private System.Windows.Forms.Label lblzVenus;
         private System.Windows.Forms.Label lblzEarth;
         private System.Windows.Forms.Label lblzMars;
