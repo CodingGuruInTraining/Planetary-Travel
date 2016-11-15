@@ -208,6 +208,7 @@
             // 
             // lblActivities
             // 
+            this.lblActivities.BackColor = System.Drawing.SystemColors.Control;
             this.lblActivities.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActivities.Location = new System.Drawing.Point(26, 318);
             this.lblActivities.Name = "lblActivities";

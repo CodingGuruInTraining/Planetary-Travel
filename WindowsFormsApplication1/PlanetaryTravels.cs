@@ -39,30 +39,40 @@ namespace WindowsFormsApplication1
             dateStart.MinDate = DateTime.Today;
             dateEnd.MinDate = DateTime.Today;
         }
-        
+
         private void picClick(object sender, EventArgs e)
         {   // Click event for selecting a destination planet.
 
             // Clears activities list and displays info label.
             clbActivities.Items.Clear();
-            lblInfoDisplay.Visible = true;
-            string description = "";
-            // Checks if a specific label was clicked and populates specific information
-            // about the planet selected.
-            if (sender == lblzVenus)
+            lblInfoDisplay.Text = "";
+            if (sender == lblzVenus || sender == lblzSaturn || sender == lblzJupiter)
             {
-                description = "Venus is a small and hot planet. It’s the second planet from the sun (between Earth and Mercury). It Orbits the Sun in 224.5 of our Earth days. Venus is named after the Roman Goddess of love and fertility – great honeymoon spot! On Earth – Venus is the second brightest object in the sky after the Earth moon. Venus itself does not have a moon however. The surface of Venus is almost entirely formed by volcanic activity. The plant offers volcano baths, tanning and hover board heat wave surfing as it’s tourist activities.";
-                destinationSelect(description, "Volcano Bath", "Tanning", "Hoverboard Heatwave Surfing", "Volcano", "Venus");
+                lblInfoDisplay.Visible = true;
+                string description = "";
+                // Checks if a specific label was clicked and populates specific information
+                // about the planet selected.
+                if (sender == lblzVenus)
+                {
+                    description = "Venus is a small and hot planet. It’s the second planet from the sun (between Earth and Mercury). It Orbits the Sun in 224.5 of our Earth days. Venus is named after the Roman Goddess of love and fertility – great honeymoon spot! On Earth – Venus is the second brightest object in the sky after the Earth moon. Venus itself does not have a moon however. The surface of Venus is almost entirely formed by volcanic activity. The plant offers volcano baths, tanning and hover board heat wave surfing as it’s tourist activities.";
+                    destinationSelect(description, "Volcano Bath", "Tanning", "Hoverboard Heatwave Surfing", "Volcano", "Venus");
+                }
+                else if (sender == lblzSaturn)
+                {
+                    description = "Saturn is a colder planet. It’s the 6th planet from the sun and rotates the sun every 10,759 Earth days (or about 29 1⁄2 years). Saturn is made up entirely of gas (hydrogen and helium) but may possibly have a solid core. The planet is surrounded by countless rings of frozen ice that provide it with the tourist’s attractions of ice skating and ice ring toss. Saturn also has over 60 moons and is named after the Roman God of agriculture.";
+                    destinationSelect(description, "Ice skating rings", "Ring Toss", "Yeti Limbo", "Frostbite", "Saturn");
+                }
+                else if (sender == lblzJupiter)
+                {
+                    description = "Jupiter is by far the largest planet in the solar system – it’s 2.5 times larger than all the other planets combined. Its incredible mass gives it really dense gravity which is great for training. Jupiter is 5th from the sun. The planet’s atmosphere is incredibly hostile to life and features a Great Red Spot which is an anticyclone storm larger than Earth. There is plenty of storms to chase on the surface and colored objects can be shot from space to change the Great Red Spot to other colors.";
+                    destinationSelect(description, "Storm Chasing", "'Great Red Spot' Shooting Gallery", "High Gravity Crossfit", "Gravity Crushing", "Jupiter");
+                }
             }
-            else if(sender == lblzSaturn)
+            else
             {
-                description = "Saturn is a colder planet. It’s the 6th planet from the sun and rotates the sun every 10,759 Earth days (or about 29 1⁄2 years). Saturn is made up entirely of gas (hydrogen and helium) but may possibly have a solid core. The planet is surrounded by countless rings of frozen ice that provide it with the tourist’s attractions of ice skating and ice ring toss. Saturn also has over 60 moons and is named after the Roman God of agriculture.";
-                destinationSelect(description, "Ice skating rings", "Ring Toss", "Yeti Limbo", "Frostbite", "Saturn");
-            }
-            else if(sender == lblzJupiter)
-            {
-                description = "Jupiter is by far the largest planet in the solar system – it’s 2.5 times larger than all the other planets combined. Its incredible mass gives it really dense gravity which is great for training. Jupiter is 5th from the sun. The planet’s atmosphere is incredibly hostile to life and features a Great Red Spot which is an anticyclone storm larger than Earth. There is plenty of storms to chase on the surface and colored objects can be shot from space to change the Great Red Spot to other colors.";
-                destinationSelect(description, "Storm Chasing", "'Great Red Spot' Shooting Gallery", "High Gravity Crossfit", "Gravity Crushing", "Jupiter");
+                lblActivities.Text = "";
+                lblInfoDisplay.Visible = false;
+                cboxInsurance.Text = "";
             }
         }
 
@@ -94,9 +104,14 @@ namespace WindowsFormsApplication1
                 string vname = lblActivities.Text.Substring(position);
             }
             else
+            {
                 MessageBox.Show("Please select a destination.", "No Selection");
-            
-            
+                return;
+            }
+
+
+
+            MessageBox.Show("We're sorry, but your bank accounts do not contain enough funds to cover this trip; we checked. Thank you!");
         }
 
         private void destinationSelect(string description, string item1, string item2, string item3, string insurance, string vname)
