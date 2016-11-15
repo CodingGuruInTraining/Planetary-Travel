@@ -82,8 +82,20 @@ namespace WindowsFormsApplication1
 
         private void btnPlanTrip_Click(object sender, EventArgs e)
         {
-            int position = lblActivities.Text.LastIndexOf(" ");
-            string vname = lblActivities.Text.Substring(position);
+            if (dateEnd.Value < dateStart.Value)
+            {
+                MessageBox.Show("Please select an End Date after the Start Date.", "Wrong Date Selection");
+                return;
+            }
+
+            if (lblActivities.Text != "")
+            {
+                int position = lblActivities.Text.LastIndexOf(" ");
+                string vname = lblActivities.Text.Substring(position);
+            }
+            else
+                MessageBox.Show("Please select a destination.", "No Selection");
+            
             
         }
 
